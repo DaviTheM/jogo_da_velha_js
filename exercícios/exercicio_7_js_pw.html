@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Vetor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+
+  <script>
+    var vetor = []; // Vetor para armazenar os valores inseridos
+
+    function adicionarValor() {
+        var valorInput = document.getElementById("valorInput");
+        var valor = parseInt(valorInput.value);
+
+        if (!isNaN(valor)) {
+            vetor.push(valor);
+            valorInput.value = ""; // Limpar o campo de entrada
+
+            alert("Valor adicionado ao vetor!");
+        } else {
+            alert("Por favor, insira um valor válido.");
+        }
+    }
+
+    function mostrarValores() {
+        if (vetor.length === 0) {
+            alert("O vetor está vazio.");
+        } else {
+            alert("Valores no vetor: " + vetor.join(", "));
+        }
+    }
+
+    function mostrarMaiorValor() {
+        if (vetor.length === 0) {
+            alert("O vetor está vazio.");
+        } else {
+            var maiorValor = Math.max(...vetor);
+            alert("Maior valor no vetor: " + maiorValor);
+        }
+    }
+
+    function mostrarMenorValor() {
+        if (vetor.length === 0) {
+            alert("O vetor está vazio.");
+        } else {
+            var menorValor = Math.min(...vetor);
+            alert("Menor valor no vetor: " + menorValor);
+        }
+    }
+</script>
+
+    <h1>Manipulação de Vetor</h1>
+    <label for="valorInput">Informe um valor:</label>
+    <input type="text" id="valorInput" />
+    <button onclick="adicionarValor()">Adicionar Valor</button>
+    <br>
+    <button onclick="mostrarValores()">Mostrar Valores</button>
+    <button onclick="mostrarMaiorValor()">Maior Valor</button>
+    <button onclick="mostrarMenorValor()">Menor Valor</button>
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">PW Java Script</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Exercícios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="exercicio_1_Js_pw.html">Exercício 1</a></li>
+            <li><a class="dropdown-item" href="exercicio_2_Js_pw.html">Exercício 2</a></li>
+            <li><a class="dropdown-item" href="exercicio_3_Js_pw.html">Exercício 3</a></li>
+            <li><a class="dropdown-item" href="exercicio_4_Js_pw.html">Exercício 4</a></li>
+            <li><a class="dropdown-item" href="exercicio_5_js_pw.html">Exercício 5</a></li>
+            <li><a class="dropdown-item" href="exercicio_6_Js_pw.html">Exercício 6</a></li>
+            <li><a class="dropdown-item" href="exercicio_7_js_pw.html">Exercício 7</a></li>
+            <li><a class="dropdown-item" href="exercício_8_js_pw.html">Exercício 8</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</body>
+</html>
